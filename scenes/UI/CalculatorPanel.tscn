@@ -1,0 +1,438 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Fonts/UI fonts/CENSCBK.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/UI fonts/BOOKOS.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/UI/CalculatorPanel.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/UI fonts/INKFREE.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/UI/paper.png" type="Texture" id=5]
+[ext_resource path="res://assets/UI/location-sample.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/UI fonts/MyUglyHandwriting-Regular.otf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 17
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 15
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+extra_spacing_top = -1
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+extra_spacing_space = 2
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 21
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 14
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 4 )
+
+[node name="CalculatorPanel" type="Control"]
+anchor_left = 0.918
+anchor_right = 0.918
+margin_left = -0.0400391
+margin_right = -0.0400391
+script = ExtResource( 3 )
+
+[node name="locButton" type="Button" parent="." groups=["tab_buttons"]]
+margin_left = 697.184
+margin_right = 845.184
+margin_bottom = 48.0
+rect_rotation = 90.0
+text = "Location"
+
+[node name="calcButton" type="Button" parent="." groups=["tab_buttons"]]
+margin_left = 697.184
+margin_top = 148.0
+margin_right = 846.184
+margin_bottom = 196.0
+rect_rotation = 90.0
+text = "Trajectory Calculation"
+
+[node name="aimButton" type="Button" parent="." groups=["tab_buttons"]]
+margin_left = 697.184
+margin_top = 296.0
+margin_right = 846.184
+margin_bottom = 344.0
+rect_rotation = 90.0
+text = "Angle Fix"
+
+[node name="notesButton" type="Button" parent="." groups=["tab_buttons"]]
+margin_left = 697.184
+margin_top = 444.0
+margin_right = 846.184
+margin_bottom = 492.0
+rect_rotation = 90.4558
+text = "Notes"
+
+[node name="Cover" type="ColorRect" parent="."]
+margin_left = 103.0
+margin_right = 649.0
+margin_bottom = 720.0
+color = Color( 0.898039, 0.835294, 0.796078, 1 )
+
+[node name="CoverShadow" type="ColorRect" parent="."]
+modulate = Color( 0, 0, 0, 0.317647 )
+margin_left = 607.0
+margin_top = 2.0
+margin_right = 649.0
+margin_bottom = 717.0
+
+[node name="Paper2" type="TextureRect" parent="."]
+modulate = Color( 0.898039, 0.909804, 0.913725, 1 )
+margin_left = 107.0
+margin_top = 2.0
+margin_right = 645.0
+margin_bottom = 713.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Paper3" type="TextureRect" parent="."]
+modulate = Color( 0.898039, 0.909804, 0.913725, 1 )
+margin_left = 104.0
+margin_top = 4.0
+margin_right = 642.0
+margin_bottom = 715.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Paper1" type="TextureRect" parent="."]
+modulate = Color( 0.898039, 0.909804, 0.913725, 1 )
+margin_left = 103.0
+margin_top = 6.0
+margin_right = 641.0
+margin_bottom = 717.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Header" type="Label" parent="."]
+margin_left = 214.0
+margin_top = 37.0
+margin_right = 498.0
+margin_bottom = 85.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Location: Someone's House.
+(remember to style the sidetabs)"
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Bookmark" type="Button" parent="."]
+margin_right = 103.0
+margin_bottom = 720.0
+text = "Bookmark"
+
+[node name="Location" type="Control" parent="."]
+
+[node name="shadow" type="ColorRect" parent="Location"]
+modulate = Color( 0.984314, 0.960784, 1, 1 )
+self_modulate = Color( 0.537255, 0.537255, 0.537255, 0.356863 )
+margin_left = 116.0
+margin_top = 176.0
+margin_right = 501.0
+margin_bottom = 432.0
+rect_rotation = -1.79982
+
+[node name="ColorRect" type="ColorRect" parent="Location"]
+margin_left = 115.0
+margin_top = 112.0
+margin_right = 617.0
+margin_bottom = 423.0
+color = Color( 0.843137, 0.847059, 0.858824, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Location"]
+margin_left = 128.0
+margin_top = 127.0
+margin_right = 544.0
+margin_bottom = 404.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="TapeRight" type="ColorRect" parent="Location"]
+modulate = Color( 0.878431, 0.827451, 0.772549, 1 )
+margin_left = 551.0
+margin_top = 108.0
+margin_right = 594.0
+margin_bottom = 194.0
+rect_rotation = -31.4688
+
+[node name="TapeRight2" type="ColorRect" parent="Location"]
+modulate = Color( 0.878431, 0.827451, 0.772549, 1 )
+margin_left = 180.0
+margin_top = 89.0
+margin_right = 223.0
+margin_bottom = 175.0
+rect_rotation = 55.9206
+
+[node name="DescriptionHeader" type="Label" parent="Location"]
+margin_left = 197.0
+margin_top = 482.0
+margin_right = 357.0
+margin_bottom = 504.0
+rect_rotation = -0.771446
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Location Description:"
+
+[node name="Description" type="Label" parent="Location"]
+margin_left = 191.0
+margin_top = 503.0
+margin_right = 639.0
+margin_bottom = 700.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "lorem ipsum"
+autowrap = true
+
+[node name="Label" type="Label" parent="Location"]
+margin_left = 473.0
+margin_top = 441.0
+margin_right = 613.0
+margin_bottom = 464.0
+rect_rotation = -1.04268
+custom_colors/font_color = Color( 0, 0, 0, 0.635294 )
+custom_fonts/font = SubResource( 7 )
+text = "We... ran out of tape"
+
+[node name="TrajectoryCalc" type="Control" parent="."]
+visible = false
+
+[node name="TargetDescription" type="Label" parent="TrajectoryCalc"]
+margin_left = 193.0
+margin_top = 95.0
+margin_right = 504.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Target is of same height:"
+align = 1
+valign = 1
+
+[node name="InitialVelocity" type="Label" parent="TrajectoryCalc"]
+margin_left = 191.0
+margin_top = 199.0
+margin_right = 695.0
+margin_bottom = 357.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Where:
+Initial Angle, θ,
+Initial Velocity, v,
+For Normal Arrow, v = 55.56 m/s
+For Geiger Arrow, v = 48.97 m/s (Approx.)
+Distance between target, d
+Gravitational acceleration, g = 9.8m/s"
+
+[node name="Equation" type="Label" parent="TrajectoryCalc"]
+margin_left = 214.0
+margin_top = 136.0
+margin_right = 525.0
+margin_bottom = 156.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "θ = 1/2 sin^-1 ( gd/v^2 )"
+align = 1
+
+[node name="Description" type="Label" parent="TrajectoryCalc"]
+margin_left = 197.0
+margin_top = 414.0
+margin_right = 508.0
+margin_bottom = 457.0
+rect_pivot_offset = Vector2( -218, -168 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Distance (m):
+Angle to hit target: "
+
+[node name="dummyArrowResult" type="Label" parent="TrajectoryCalc"]
+margin_left = 196.0
+margin_top = 501.0
+margin_right = 369.0
+margin_bottom = 544.0
+rect_pivot_offset = Vector2( -95, -372 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Dummy Arrow:
+75 - 100m?"
+
+[node name="rangeFinderResult" type="Label" parent="TrajectoryCalc"]
+margin_left = 430.0
+margin_top = 501.0
+margin_right = 603.0
+margin_bottom = 544.0
+rect_pivot_offset = Vector2( -95, -372 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Rangefinder: 
+86m"
+align = 1
+
+[node name="DummyFire" type="Button" parent="TrajectoryCalc"]
+margin_left = 191.0
+margin_top = 499.0
+margin_right = 394.0
+margin_bottom = 549.0
+text = "Fire Dummy Arrow"
+
+[node name="RadioFire" type="Button" parent="TrajectoryCalc"]
+margin_left = 417.0
+margin_top = 499.0
+margin_right = 619.0
+margin_bottom = 549.0
+text = "Use Rangefinder"
+
+[node name="Angle" type="Control" parent="."]
+visible = false
+
+[node name="Notes" type="Control" parent="."]
+visible = false
+
+[node name="NotesYumi" type="ColorRect" parent="Notes"]
+margin_left = 115.0
+margin_top = 127.0
+margin_right = 365.0
+margin_bottom = 170.0
+color = Color( 1, 0.890196, 0.517647, 1 )
+
+[node name="Shadow" type="ColorRect" parent="Notes/NotesYumi"]
+self_modulate = Color( 0.537255, 0.537255, 0.537255, 0.356863 )
+margin_top = 169.0
+margin_right = 247.0
+margin_bottom = 212.0
+rect_rotation = -2.03638
+
+[node name="ColorRect" type="ColorRect" parent="Notes/NotesYumi"]
+margin_top = 43.0
+margin_right = 250.0
+margin_bottom = 200.0
+color = Color( 1, 0.890196, 0.517647, 1 )
+
+[node name="Content" type="Label" parent="Notes/NotesYumi/ColorRect"]
+margin_left = 13.0
+margin_right = 217.0
+margin_bottom = 119.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "loreem ipsum"
+autowrap = true
+
+[node name="Name" type="Label" parent="Notes/NotesYumi"]
+margin_left = 134.0
+margin_top = 154.0
+margin_right = 231.0
+margin_bottom = 176.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "-Yumi."
+
+[node name="NotesYume" type="ColorRect" parent="Notes"]
+margin_left = 373.0
+margin_top = 296.0
+margin_right = 623.0
+margin_bottom = 339.0
+color = Color( 0.913725, 0.168627, 0.32549, 1 )
+
+[node name="Shadow" type="ColorRect" parent="Notes/NotesYume"]
+self_modulate = Color( 0.537255, 0.537255, 0.537255, 0.356863 )
+margin_left = 3.0
+margin_top = 157.0
+margin_right = 250.0
+margin_bottom = 200.0
+rect_rotation = 2.52672
+
+[node name="ColorRect" type="ColorRect" parent="Notes/NotesYume"]
+margin_top = 43.0
+margin_right = 250.0
+margin_bottom = 195.0
+color = Color( 0.913725, 0.168627, 0.32549, 1 )
+
+[node name="Content" type="Label" parent="Notes/NotesYume/ColorRect"]
+margin_left = 21.0
+margin_top = 10.0
+margin_right = 226.0
+margin_bottom = 125.0
+custom_colors/font_color = Color( 0, 0, 0, 0.647059 )
+custom_fonts/font = SubResource( 10 )
+text = "lorem upsid"
+autowrap = true
+
+[node name="Name" type="Label" parent="Notes/NotesYume"]
+margin_left = 171.0
+margin_top = 149.0
+margin_right = 221.0
+margin_bottom = 169.0
+custom_colors/font_color = Color( 0, 0, 0, 0.678431 )
+custom_fonts/font = SubResource( 11 )
+text = "~Yume"
+
+[node name="NotesYuuko" type="ColorRect" parent="Notes"]
+margin_left = 152.0
+margin_top = 456.0
+margin_right = 402.0
+margin_bottom = 499.0
+color = Color( 0.396078, 0.643137, 0.992157, 1 )
+
+[node name="Shadow" type="ColorRect" parent="Notes/NotesYuuko"]
+self_modulate = Color( 0.537255, 0.537255, 0.537255, 0.356863 )
+margin_top = 159.0
+margin_right = 247.0
+margin_bottom = 202.0
+rect_rotation = 0.413728
+
+[node name="ColorRect" type="ColorRect" parent="Notes/NotesYuuko"]
+margin_top = 43.0
+margin_right = 250.0
+margin_bottom = 196.0
+color = Color( 0.396078, 0.643137, 0.992157, 1 )
+
+[node name="Content" type="Label" parent="Notes/NotesYuuko/ColorRect"]
+margin_left = 19.0
+margin_top = 4.0
+margin_right = 186.0
+margin_bottom = 108.0
+custom_colors/font_color = Color( 0, 0, 0, 0.588235 )
+custom_fonts/font = SubResource( 13 )
+text = "yadw"
+
+[node name="Name" type="Label" parent="Notes/NotesYuuko"]
+margin_left = 147.0
+margin_top = 159.0
+margin_right = 221.0
+margin_bottom = 182.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "-Yuuko"
+
+[connection signal="pressed" from="Bookmark" to="." method="_on_Bookmark_pressed"]
+[connection signal="pressed" from="TrajectoryCalc/DummyFire" to="." method="_on_DummyFire_pressed"]
+[connection signal="pressed" from="TrajectoryCalc/RadioFire" to="." method="_on_RadioFire_pressed"]

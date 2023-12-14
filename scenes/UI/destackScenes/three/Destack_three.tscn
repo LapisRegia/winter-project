@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/UI/DestackButtons/destack_three.gd" type="Script" id=1]
+
+[node name="destack_Vbox" type="VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/separation = 10
+script = ExtResource( 1 )
+_topButton = NodePath("char1_button")
+_midButton = NodePath("char2_button")
+_botButton = NodePath("char3_button")
+path_top_character = "res://scenes/Characters/Yumi.tscn"
+name_top_character = "Yumi"
+path_top_residual = "res://scenes/Characters/Stack/Yuuko_Yume.tscn"
+name_top_residual = "Yuuko_Yume"
+path_mid_character = "res://scenes/Characters/Yuuko.tscn"
+name_mid_character = "Yuuko"
+path_mid_residual = "res://scenes/Characters/Stack/Yumi_Yume.tscn"
+name_mid_residual = "Yumi_Yume"
+path_bot_character = "res://scenes/Characters/Yume.tscn"
+name_bot_character = "Yume"
+path_bot_residual = "res://scenes/Characters/Stack/Yumi_Yuuko.tscn"
+name_bot_residual = "Yumi_Yuuko"
+
+[node name="char1_button" type="Button" parent="."]
+margin_right = 105.0
+margin_bottom = 20.0
+text = "Destack Yumi"
+
+[node name="char2_button" type="Button" parent="."]
+margin_top = 30.0
+margin_right = 105.0
+margin_bottom = 50.0
+text = "Destack Yuuko"
+
+[node name="char3_button" type="Button" parent="."]
+margin_top = 60.0
+margin_right = 105.0
+margin_bottom = 80.0
+text = "Destack Yume"

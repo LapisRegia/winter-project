@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://explorables.gd" type="Script" id=1]
+[ext_resource path="res://assets/UI/location-sample.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+discovered = false
+traversed = false
+rangeFindPressed = false
+dummyFirePressed = false
+radioFireShot = false
+characterHasTraversed = [  ]
+requiredCharacters = [ 0, 1, 2 ]
+locationHeader = "Location: Someone's house"
+image = ExtResource( 2 )
+description = "A 200m long street judging by the map, and has a 5 degree change of elevation. Target is tree branch about 0.1m - 0.2m in diameter.One of Yume's coworkers used to live here. She insisted on checking this place out. Let's hope someone's alive somehow."
+dummyResult = ""
+rangeResult = ""
+distance = 0
+angleRange = ""
+anglePrecise = ""
+targetAngle = 0
+std_dev = 0
+notesArray = [ "Been a while since ive done a hundred meter..       Doable?", "just returning the favour. i just hope you listened.", "A long Street." ]

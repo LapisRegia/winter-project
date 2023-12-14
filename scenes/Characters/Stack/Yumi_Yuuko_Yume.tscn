@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Character/Stacks/YYY.gd" type="Script" id=1]
+[ext_resource path="res://assets/Characters/haru.jpg" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 48.8889
+
+[node name="Yumi_Yuuko_Yume" type="KinematicBody2D" groups=["Characters"]]
+position = Vector2( 9.53674e-07, 9.53674e-07 )
+scale = Vector2( 0.45, 0.45 )
+script = ExtResource( 1 )
+identifier = [ 0, 1, 2 ]
+_active_label = NodePath("ActiveLabel")
+_tween = NodePath("Tween")
+no_of_turns = 30
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="characterButton" type="TextureButton" parent="."]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 2 )
+
+[node name="ActiveLabel" type="RichTextLabel" parent="."]
+margin_left = -37.7778
+margin_top = -91.1111
+margin_right = 0.222416
+margin_bottom = -76.1111
+rect_scale = Vector2( 2, 2 )
+custom_colors/default_color = Color( 0.996078, 0.329412, 0.329412, 1 )
+tab_size = 8
+text = "active"
+fit_content_height = true
+scroll_active = false
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="pressed" from="characterButton" to="." method="_on_characterButton_pressed"]

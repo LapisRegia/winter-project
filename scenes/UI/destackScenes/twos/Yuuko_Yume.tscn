@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/UI/DestackButtons/destack_two.gd" type="Script" id=1]
+
+[node name="destack_Vbox" type="VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/separation = 10
+script = ExtResource( 1 )
+_topButton = NodePath("char1_button")
+_botButton = NodePath("char2_button")
+path_top_character = "res://scenes/Characters/Yuuko.tscn"
+name_top_character = "Yuuko"
+path_bot_character = "res://scenes/Characters/Yume.tscn"
+name_bot_character = "Yume"
+
+[node name="char1_button" type="Button" parent="."]
+margin_right = 105.0
+margin_bottom = 20.0
+text = "Destack Yuuko"
+
+[node name="char2_button" type="Button" parent="."]
+margin_top = 30.0
+margin_right = 105.0
+margin_bottom = 50.0
+text = "Destack Yume"

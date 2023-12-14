@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/UI/destackPanel.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/UI fonts/BOOKOS.TTF" type="DynamicFontData" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 26
+font_data = ExtResource( 2 )
+
+[node name="canvas_destack" type="CanvasLayer"]
+script = ExtResource( 1 )
+_noti_tween = NodePath("notificationDestack/Tween")
+_panel_tween = NodePath("buttonPanel/Tween")
+_line = NodePath("notificationDestack/line2points")
+_notificationDestack = NodePath("notificationDestack")
+_button_panel = NodePath("buttonPanel")
+_cancel_button = NodePath("buttonPanel/cancel")
+
+[node name="notificationDestack" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 0.121
+anchor_right = 1.148
+anchor_bottom = 0.176
+margin_top = -0.120003
+margin_right = 0.560059
+margin_bottom = 0.279984
+
+[node name="Label" type="Label" parent="notificationDestack"]
+margin_right = 190.0
+margin_bottom = 40.0
+text = "Choose an adjacent node"
+align = 1
+valign = 1
+
+[node name="line2points" type="Line2D" parent="notificationDestack"]
+position = Vector2( 0, 20 )
+width = 5.0
+default_color = Color( 0.945098, 0.517647, 0.235294, 1 )
+
+[node name="Tween" type="Tween" parent="notificationDestack"]
+
+[node name="buttonPanel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 0.773
+anchor_right = 1.0
+anchor_bottom = 0.773
+margin_left = 126.0
+margin_top = 12.4399
+margin_right = 431.0
+margin_bottom = 219.44
+rect_rotation = 6.50615
+
+[node name="Panel2" type="Panel" parent="buttonPanel"]
+anchor_left = 0.269
+anchor_top = 0.023
+anchor_right = 0.269
+anchor_bottom = 0.023
+margin_left = 188.955
+margin_top = -181.761
+margin_right = 458.955
+margin_bottom = 340.239
+rect_rotation = 46.0238
+
+[node name="cancel" type="Button" parent="buttonPanel"]
+margin_right = 199.0
+margin_bottom = 136.0
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Cancel"
+
+[node name="Tween" type="Tween" parent="buttonPanel"]
